@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Sync tracker (optional — remove this line if you WANT it in the repo)
+.sync_tracker.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
