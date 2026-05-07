@@ -1,12 +1,21 @@
 # 🎯 HackerRank Solutions — @helaluddin_bru
 
-Auto-synced with Python · Last updated: 2026-05-07 03:52 UTC
+Auto-synced with Python · Last updated: 2026-05-07 03:59 UTC
+
+🔗 Profile: [https://www.hackerrank.com/profile/helaluddin_bru](https://www.hackerrank.com/profile/helaluddin_bru)
 
 ## 📊 Stats
 
 | Total | Easy | Medium |
 |-------|---|---|
 | 37 | 34 | 3 |
+
+## 🏆 Certificates
+
+> Full details → [`Certificates/`](./Certificates/)
+
+| Certificate | Level | Issued |
+|-------------|-------|--------|
 
 ## 🗂️ Browse by Topic
 
