@@ -15,10 +15,10 @@
 
 | Badge | Stars | Problems Solved |
 |-------|-------|-----------------|
-| Unknown | — | 13 |
+| Unknown | — | 14 |
 | Unknown | — | 12 |
 | Unknown | — | 0 |
-| Unknown | — | 9 |
+| Unknown | — | 11 |
 | Unknown | — | 23 |
 | Unknown | — | 20 |
 | Unknown | — | 0 |

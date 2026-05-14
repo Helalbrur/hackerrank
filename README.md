@@ -1,6 +1,6 @@
 # 🎯 HackerRank Solutions — @helaluddin_bru
 
-Auto-synced with Python · Last updated: 2026-05-07 03:59 UTC
+Auto-synced with Python · Last updated: 2026-05-14 05:15 UTC
 
 🔗 Profile: [https://www.hackerrank.com/profile/helaluddin_bru](https://www.hackerrank.com/profile/helaluddin_bru)
 
@@ -8,7 +8,7 @@ Auto-synced with Python · Last updated: 2026-05-07 03:59 UTC
 
 | Total | Easy | Medium |
 |-------|---|---|
-| 37 | 34 | 3 |
+| 40 | 37 | 3 |
 
 ## 🏆 Certificates
 
@@ -23,9 +23,10 @@ Auto-synced with Python · Last updated: 2026-05-07 03:59 UTC
 |----------|----------|
 | 30DaysOfCode | 22 |
 | Py Introduction | 7 |
+| Py Basic Data Types | 4 |
 | Bit Manipulation | 3 |
-| Py Basic Data Types | 2 |
 | Algorithms | 1 |
+| Warmup | 1 |
 | Linked Lists | 1 |
 | Recursion | 1 |
 
@@ -34,7 +35,9 @@ Auto-synced with Python · Last updated: 2026-05-07 03:59 UTC
 | Language | Solutions |
 |----------|-----------|
 | [CPP](./Programming%20Languages/CPP/) | 28 |
-| [Python](./Programming%20Languages/Python/) | 9 |
+| [Python](./Programming%20Languages/Python/) | 13 |
+| [JavaScript](./Programming%20Languages/JavaScript/) | 1 |
+| [PHP](./Programming%20Languages/PHP/) | 1 |
 
 ## 📋 All Solutions
 
@@ -64,11 +67,14 @@ Auto-synced with Python · Last updated: 2026-05-07 03:59 UTC
 | [Day 8: Dictionaries and Maps](https://www.hackerrank.com/challenges/17161/problem) | Easy | 30DaysOfCode | `cpp` | 2026-05-07 |
 | [Day 9: Recursion 3  ](https://www.hackerrank.com/challenges/18938/problem) | Easy | 30DaysOfCode | `cpp` | 2026-05-07 |
 | [Find the Runner-Up Score!  ](https://www.hackerrank.com/challenges/1374/problem) | Easy | Py Basic Data Types | `pypy3` | 2026-05-07 |
+| [Finding the percentage](https://www.hackerrank.com/challenges/1377/problem) | Easy | Py Basic Data Types | `pypy3` | 2026-05-14 |
 | [List Comprehensions](https://www.hackerrank.com/challenges/1572/problem) | Easy | Py Basic Data Types | `pypy3` | 2026-05-07 |
+| [Lists](https://www.hackerrank.com/challenges/7888/problem) | Easy | Py Basic Data Types | `pypy3` | 2026-05-14 |
 | [Lonely Integer](https://www.hackerrank.com/challenges/915/problem) | Easy | Bit Manipulation | `cpp` | 2026-05-07 |
 | [Loops](https://www.hackerrank.com/challenges/7941/problem) | Easy | Py Introduction | `pypy3` | 2026-05-07 |
 | [Max Array Sum ](https://www.hackerrank.com/challenges/44902/problem) | Medium | Algorithms | `cpp` | 2026-05-07 |
 | [Maximizing XOR](https://www.hackerrank.com/challenges/2381/problem) | Easy | Bit Manipulation | `cpp` | 2026-05-07 |
+| [Plus Minus](https://www.hackerrank.com/challenges/8654/problem) | Easy | Warmup | `pypy3`, `javascript`, `php`, `python3` | 2026-05-14 |
 | [Print Function](https://www.hackerrank.com/challenges/8026/problem) | Easy | Py Introduction | `pypy3` | 2026-05-07 |
 | [Print the Elements of a Linked List](https://www.hackerrank.com/challenges/1082/problem) | Easy | Linked Lists | `cpp` | 2026-05-07 |
 | [Python If-Else](https://www.hackerrank.com/challenges/22447/problem) | Easy | Py Introduction | `pypy3` | 2026-05-07 |
