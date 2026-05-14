@@ -112,6 +112,19 @@ def fetch_submissions() -> list:
     print(f"\n  Total accepted: {len(all_accepted)}")
     return all_accepted
 
+def fetch_submission_code(sub_id: str) -> str:
+    """Fetch actual code for a submission by its ID."""
+    try:
+        resp = requests.get(
+            f"{BASE_URL}/rest/contests/master/submissions/{sub_id}",
+            headers=HEADERS, timeout=15,
+        )
+        if resp.status_code == 200:
+            return resp.json().get("model", {}).get("code", "")
+    except Exception as e:
+        print(f"    ⚠ Code fetch failed for id={sub_id}: {e}")
+    return ""
+
 # ============== FETCH CERTIFICATES & BADGES ==============
 def fetch_certificates() -> dict:
     """Returns {'certificates': [...], 'badges': [...]}"""
@@ -474,8 +487,19 @@ def run():
         name = sub.get("challenge", {}).get("name", slug)
         print(f"  ⬇ {name} ({lang})  [id={sub_id}]")
 
+        #detail            = fetch_problem_detail(slug)
+        #count_key         = f"{slug}::{lang}"
+
+        # Fetch actual code from individual submission endpoint
+        sub["code"] = fetch_submission_code(sub_id)
+        if not sub["code"]:
+            print(f"    ⚠ No code returned for id={sub_id}, skipping.")
+            continue
+
         detail            = fetch_problem_detail(slug)
         count_key         = f"{slug}::{lang}"
+
+
         attempt_num       = counts.get(count_key, 0) + 1
         counts[count_key] = attempt_num
         category          = save_solution(sub, detail, attempt_num, repo_path)
