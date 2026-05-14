@@ -112,17 +112,35 @@ def fetch_submissions() -> list:
     print(f"\n  Total accepted: {len(all_accepted)}")
     return all_accepted
 
-def fetch_submission_code(sub_id: str) -> str:
-    """Fetch actual code for a submission by its ID."""
-    try:
-        resp = requests.get(
-            f"{BASE_URL}/rest/contests/master/submissions/{sub_id}",
-            headers=HEADERS, timeout=15,
-        )
-        if resp.status_code == 200:
-            return resp.json().get("model", {}).get("code", "")
-    except Exception as e:
-        print(f"    ⚠ Code fetch failed for id={sub_id}: {e}")
+def fetch_submission_code(sub_id: str, retries: int = 3) -> str:
+    """Fetch actual code for a submission by its ID, with retry on rate-limit."""
+    for attempt in range(retries):
+        try:
+            time.sleep(1.2)  # Respect rate limit between every call
+            resp = requests.get(
+                f"{BASE_URL}/rest/contests/master/submissions/{sub_id}",
+                headers=HEADERS, timeout=15,
+            )
+            if resp.status_code == 200:
+                code = resp.json().get("model", {}).get("code", "")
+                if code:
+                    return code
+                # Empty code — log raw response for debugging
+                print(f"    ⚠ Empty code in response for id={sub_id}. Keys: {list(resp.json().get('model', {}).keys())}")
+                return ""
+            elif resp.status_code == 429:
+                wait = 5 * (attempt + 1)
+                print(f"    ⏳ Rate limited (429). Waiting {wait}s before retry {attempt+1}/{retries}…")
+                time.sleep(wait)
+            elif resp.status_code == 404:
+                print(f"    ⚠ Submission id={sub_id} not found (404).")
+                return ""
+            else:
+                print(f"    ⚠ HTTP {resp.status_code} for id={sub_id}")
+                time.sleep(2)
+        except Exception as e:
+            print(f"    ⚠ Code fetch failed for id={sub_id}: {e}")
+            time.sleep(2)
     return ""
 
 # ============== FETCH CERTIFICATES & BADGES ==============
